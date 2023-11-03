@@ -8,6 +8,7 @@ import HomePage from "./pages/home-page";
 import AboutPage from "./pages/about-page";
 import "./App.css";
 import Layout from "./components/layout";
+import RegisterPage from "./pages/register-page";
 
 // Components are capitalized
 function App() {
@@ -20,6 +21,7 @@ function App() {
         {/* Child pages will be displayed here */}
         <Route index element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/register" element={<RegisterPage />} />
       </Route>,
     ),
   );

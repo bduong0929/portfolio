@@ -2,6 +2,7 @@ import React from "react";
 import { CommandIcon, MoonIcon, SunIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ThemeContext } from "../contexts/theme-provider";
+import Button from "./button";
 
 function Navbar() {
   // Use context
@@ -40,10 +41,13 @@ function Navbar() {
       </ul>
 
       {/* Right side */}
-      <ul>
+      <ul className="flex items-center gap-5">
         <button onClick={toggleDarkmode}>
           {theme === "light" ? <MoonIcon size={25} /> : <SunIcon size={30} />}
         </button>
+        <Link to={"/register"}>
+          <Button>Register</Button>
+        </Link>
       </ul>
     </nav>
   );
